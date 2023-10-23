@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,*::before,*::after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family: inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*=======================================================================================================*/
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 100vh;
+    background: #1f2028;
+}
+section {
+    position: relatie;
+    width: 100%;
+}
+section .waves {
+    position: relative;
+}
+section .waves .wave {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: url(../img/wave.png);
+    background-size: 1000px 100px;
+}
+section .waves .wave#wave1 {
+    opacity: 1;
+    bottom: 0;
+    z-index: 1000;
+    animation: animate 4s linear infinite;
+}
+section .waves .wave#wave2 {
+    opacity: 0.5s;
+    bottom: 10px;
+    z-index: 999;
+    animation: animate2 4s linear infinite;
+}
+section .waves .wave#wave3 {
+    opacity: 0.2s;
+    bottom: 15px;
+    z-index: 998;
+    animation: animate 2s linear infinite;
+}
+section .waves .wave#wave4 {
+    opacity: 0.7s;
+    bottom: 20px;
+    z-index: 999;
+    animation: animate2 2s linear infinite;
+}
+@keyframes animate {
+    0% {
+        background-position-x: 1000px;
+    }
+    50% {}
+    100% {
+        background-position-x: 0;
+    }
+}
+@keyframes animate2 {
+    0% {
+        background-position-x: 0;
+    }
+    50% {}
+    100% {
+        background-position-x: 1000px;
+    }
+}
+.star {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    mix-blend-mode: screen;
+}
+.island {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    bottom: 0;
+}
